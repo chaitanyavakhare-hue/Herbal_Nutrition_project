@@ -1,7 +1,4 @@
 # Herbal_Nutrition_project
-The three parts of the file
-
-The file has three layers:
 
 HTML is the skeleton: the sections, buttons, forms and empty boxes such as #shopGrid and #cartBody.
 CSS is the styling: colors, layout, the leaf animations and the dark and cream look.
