@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CEP Nutrition &amp; Herbal — The Apothecary</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600&amp;family=Work+Sans:wght@400;600&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#152A1C;--deep:#0F2015;--panel:#1E3826;--line:#33513C;--paper:#F0E4C4;--ink:#241A0F;--soft:#4A3B27;--gold:#C4922E;--gb:#DDAC49;--sage:#9CB48E;--red:#A3432F}
+html{scroll-behavior:smooth;scroll-padding-top:70px}*{box-sizing:border-box}
+body{margin:0;background:var(--bg) radial-gradient(circle at 10% 0,rgba(196,146,46,.1),transparent 40%),radial-gradient(circle at 100% 35%,rgba(156,180,142,.08),transparent 45%);color:var(--paper);font:16px/1.5 'Work Sans',system-ui,sans-serif;padding-top:env(safe-area-inset-top,0)}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;margin:0}.mono{font-family:'IBM Plex Mono',monospace}
+button{font:inherit;cursor:pointer}a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:40;background:rgba(15,32,21,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 20px;flex-wrap:wrap}
+.brand{font:700 1.15rem Fraunces,serif;display:flex;gap:8px;align-items:center}.brand small{display:block;font:.58rem 'Work Sans';letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+.nav nav{display:flex;gap:16px;font-size:.82rem;flex-wrap:wrap}.nav nav a{text-decoration:none;opacity:.85;border-bottom:1px solid transparent}.nav nav a:hover{opacity:1;border-color:var(--gb)}
+@media(max-width:980px){.nav nav{display:none}}.act{display:flex;gap:8px}
+.btn{border:1px solid transparent;padding:10px 18px;border-radius:2px;font-weight:600;font-size:.85rem;text-decoration:none;display:inline-block;transition:transform .12s}.btn:active{transform:translateY(1px)}
+.bg{background:var(--gb);color:#221802}.bo{background:transparent;border-color:var(--line);color:var(--paper)}.bg:hover{background:#EEC066}.bo:hover{border-color:var(--gb)}
+.cc{background:var(--gb);color:#221802;border-radius:10px;padding:0 6px;font-size:.7rem;margin-left:4px}
+.tick{background:var(--gb);color:#221802;overflow:hidden;white-space:nowrap;font:600 .72rem 'IBM Plex Mono';letter-spacing:.1em;text-transform:uppercase}.tick div{display:inline-block;padding:6px 0;animation:mq 30s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}
+.hero{padding:70px 0 50px;position:relative;overflow:hidden}.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;position:relative;z-index:1}@media(max-width:880px){.hg{grid-template-columns:1fr}}
+.lv{position:absolute;inset:0;pointer-events:none}.lv span{position:absolute;top:-8%;color:rgba(156,180,142,.45);font-size:1.3rem;animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(0) rotate(0);opacity:0}10%,90%{opacity:1}100%{transform:translateY(620px) rotate(240deg);opacity:0}}
+.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.22em;color:var(--gb);margin-bottom:8px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.05}.hero h1 em{color:var(--gb)}.hero p{color:var(--sage);max-width:50ch}
+.seal{background:var(--paper);color:var(--ink);padding:28px 24px;position:relative;box-shadow:0 14px 34px rgba(0,0,0,.4);transform:rotate(1.5deg);transition:transform .3s}.seal:hover{transform:rotate(0)}
+.seal:before{content:"";position:absolute;inset:8px;border:1px dashed rgba(36,26,15,.35)}.seal h3{font-style:italic;font-size:1.5rem}.seal ul{padding-left:18px;font-size:.88rem;color:var(--soft)}
+.stamp{position:absolute;top:20px;right:20px;width:62px;height:62px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font:.55rem/1.1 'IBM Plex Mono';color:var(--gold);transform:rotate(9deg)}
+.sec{padding:52px 0}.sec h2{font-size:1.9rem;margin-bottom:6px}.sub{color:var(--sage);margin:0 0 22px;max-width:62ch}
+.rv{opacity:0;transform:translateY(20px);transition:all .7s}.rv.in{opacity:1;transform:none}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.chip{border:1px solid var(--line);background:var(--panel);color:var(--paper);padding:7px 14px;border-radius:20px;font-size:.8rem}.chip.on,.chip:hover{border-color:var(--gb);color:var(--gb)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--paper);color:var(--ink);padding:18px;text-align:center;border:1px dashed rgba(36,26,15,.35);outline:6px solid var(--paper);outline-offset:-6px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 26px rgba(0,0,0,.35)}.card.mk{border-left:4px solid var(--sage)}
+.top{display:flex;justify-content:space-between;align-items:center;font:.6rem 'IBM Plex Mono';color:var(--soft);padding:0 6px}
+.bd{background:var(--red);color:#fbe9e3;padding:2px 6px}.bd.n{background:var(--sage);color:#152a1c}
+.wish{width:24px;height:24px;border-radius:50%;border:1px solid rgba(36,26,15,.3);background:none;color:var(--soft);margin-left:6px;line-height:1}.wish.on{color:var(--red);border-color:var(--red)}
+.gl{font-size:2.6rem;margin-top:4px;transition:transform .3s}.card:hover .gl{transform:scale(1.15) rotate(-6deg)}.card h3{font-size:1.08rem;margin-top:4px}.lat{font-style:italic;font-size:.76rem;color:var(--soft)}
+.sl{font:.7rem 'IBM Plex Mono';color:var(--soft);margin-top:4px}.st{color:var(--gold);letter-spacing:1px;font-size:.85rem}.card p{font-size:.82rem;color:var(--soft);flex:1;margin:6px 0}
+.pr{display:flex;justify-content:center;gap:8px;align-items:baseline}.pr b{font:600 1.1rem 'IBM Plex Mono'}.pr s{color:var(--soft);font-size:.8rem}.pr em{color:var(--red);font-size:.75rem;font-style:normal}
+.ca{display:flex;gap:8px;margin-top:12px}.ca .btn{flex:1;padding:9px 6px;font-size:.76rem}.card .bo{color:var(--ink);border-color:rgba(36,26,15,.3)}
+.panel{background:var(--panel);border:1px solid var(--line);padding:22px}.panel h3{margin-bottom:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}@media(max-width:820px){.two{grid-template-columns:1fr}}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}.stat{flex:1;min-width:110px;background:var(--panel);border:1px solid var(--line);padding:14px;text-align:center}
+.stat b{display:block;font:600 1.5rem 'IBM Plex Mono';color:var(--gb)}.stat span{font-size:.7rem;text-transform:uppercase;color:var(--sage)}
+input,select,textarea{background:var(--deep);border:1px solid var(--line);color:var(--paper);padding:10px 12px;border-radius:2px;font:inherit;width:100%}textarea{min-height:80px}
+form.f{display:flex;flex-direction:column;gap:10px}label{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--sage)}
+.thread{background:var(--deep);border:1px solid var(--line);padding:12px;margin-bottom:12px;font-size:.84rem}.meta{font:.68rem 'IBM Plex Mono';color:var(--sage);margin-bottom:6px}
+.bub{padding:6px 10px;margin:6px 0;background:var(--panel)}.bub.me{background:rgba(196,146,46,.2)}.rr{display:flex;gap:6px;margin-top:8px}
+ul.ml{list-style:none;padding:0;margin:0}ul.ml li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.86rem}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:360px;margin-top:12px}.mem{aspect-ratio:1;font-size:1.7rem;background:var(--deep);border:1px solid var(--line);color:var(--sage)}.mem.up{background:var(--paper)}.mem.done{background:var(--sage)}
+.arena{position:relative;height:220px;max-width:420px;background:var(--deep);border:1px solid var(--line);margin:12px 0;overflow:hidden}#leafBtn{position:absolute;font-size:2rem;background:none;border:0;display:none;padding:0}
+.cp{font:.74rem 'IBM Plex Mono';border:1px dashed var(--gb);color:var(--gb);padding:4px 10px}
+.chat{height:250px;overflow:auto;background:var(--deep);border:1px solid var(--line);padding:12px;font-size:.86rem}.cm{margin-bottom:10px}.cm .w{font:.62rem 'IBM Plex Mono';text-transform:uppercase;color:var(--gb)}.cm.u .w{color:var(--sage)}
+.rx{background:var(--paper);color:var(--ink);padding:22px;position:relative;min-height:200px}.rx:before{content:"";position:absolute;inset:7px;border:1px dashed rgba(36,26,15,.3);pointer-events:none}
+.rl{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(36,26,15,.22);font-size:.86rem}.rl small{display:block;color:var(--soft)}.rl b{font-family:'IBM Plex Mono';color:var(--gold)}
+.sl2 label{display:flex;justify-content:space-between;margin-bottom:6px}.sl2{margin-bottom:18px}input[type=range]{padding:0;accent-color:var(--gb)}
+.rc{background:var(--panel);border:1px solid var(--line);padding:16px;font-size:.86rem}.rc .st{display:block}
+.ci2{display:grid;grid-template-columns:1fr 1fr;gap:40px}@media(max-width:820px){.ci2{grid-template-columns:1fr}}.cl{list-style:none;padding:0}.cl li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.9rem}.cl b{width:80px;color:var(--sage);font:.7rem 'IBM Plex Mono';text-transform:uppercase}
+.ov{position:fixed;inset:0;background:rgba(10,18,12,.65);z-index:100;display:none}.ov.show{display:block}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,92vw);background:var(--panel);border-left:1px solid var(--line);z-index:101;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
+.drawer.show{transform:none}.dh,.df{padding:18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.df{border:0;border-top:1px solid var(--line);display:block}
+.db{flex:1;overflow:auto;padding:18px}.ci{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:.88rem}.ci .m{flex:1}
+.q{display:flex;gap:6px;align-items:center}.q button,.x{background:var(--deep);border:1px solid var(--line);color:var(--paper);width:26px;height:26px}.x{background:none;border:0;font-size:1.2rem;width:auto}
+.bar{height:6px;background:var(--deep);margin:6px 0 12px}.bar i{display:block;height:100%;background:var(--gb);transition:width .3s}
+.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:102;width:min(500px,92vw);max-height:88vh;overflow:auto;background:var(--paper);color:var(--ink);padding:26px;display:none}.modal.show{display:block}
+.modal input,.modal select,.modal textarea{background:#fff8e6;color:var(--ink);border-color:rgba(36,26,15,.3)}.modal label{color:var(--soft)}
+.tabs{display:flex;gap:8px;margin:12px 0}.tabs button{flex:1;padding:9px;border:1px solid rgba(36,26,15,.3);background:none;color:var(--ink);font-weight:600}.tabs button.on{background:var(--ink);color:var(--paper)}
+.err{color:var(--red);font-size:.8rem;min-height:1em}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:11px 20px;z-index:200;opacity:0;transition:opacity .2s;pointer-events:none;font-size:.86rem;max-width:90vw}.toast.show{opacity:1}
+.fab{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom,0px));right:22px;z-index:60;background:var(--gb);border:0;width:56px;height:56px;border-radius:50%;font-size:1.4rem;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:.8rem;color:var(--sage)}.disc{background:var(--paper);color:var(--soft);padding:12px 16px;margin-top:16px;font-size:.72rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:8px 0 24px}
+.ft{background:linear-gradient(160deg,var(--panel),var(--deep));border:1px solid var(--line);padding:22px;text-align:center;transition:transform .25s,border-color .25s,box-shadow .25s}
+.ft:hover{transform:translateY(-6px);border-color:var(--gb);box-shadow:0 12px 28px rgba(196,146,46,.18)}.ft span{font-size:2.3rem;display:inline-block;animation:bob 3s ease-in-out infinite}.ft h3{margin:8px 0 4px;font-size:1.05rem}.ft p{margin:0;font-size:.82rem;color:var(--sage)}
+@keyframes bob{50%{transform:translateY(-7px) rotate(6deg)}}
+.deal{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;margin-top:24px;padding:28px;background:linear-gradient(120deg,#2b4a31,#1a3322 55%,#3a3217);border:1px solid var(--gold);position:relative;overflow:hidden}
+.deal:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.1),transparent);animation:shine 4.5s infinite}@keyframes shine{to{left:130%}}
+@media(max-width:760px){.deal{grid-template-columns:1fr}}.deal h2{font-size:1.7rem}.deal p{color:var(--sage)}.cdn{display:inline-block;font-size:1.7rem;color:var(--gb);border:1px dashed var(--gb);padding:6px 16px;letter-spacing:.12em}
+.dealR{text-align:center;position:relative;z-index:1}.dealR .big{font-size:4.2rem;animation:bob 3s ease-in-out infinite}
+#thanks{position:relative;overflow:hidden;padding:90px 0 80px;background:radial-gradient(ellipse at 50% 0,#2d4d35,transparent 65%),radial-gradient(circle at 50% 110%,rgba(196,146,46,.3),transparent 55%),var(--deep);border-top:1px solid var(--gold);margin-top:30px}
+.lt span{display:inline-block;animation:wave 2.6s ease-in-out infinite;animation-delay:calc(var(--i)*.1s)}
+@keyframes wave{0%,100%{transform:translateY(0) scale(1);color:var(--paper)}50%{transform:translateY(-16px) scale(1.12);color:var(--gb);text-shadow:0 0 22px rgba(221,172,73,.7)}}
+.lt.big{font-size:clamp(2.6rem,9vw,5.6rem);line-height:1.05;text-shadow:0 0 30px rgba(221,172,73,.25)}.lt.mid{font:italic 600 clamp(1.8rem,6vw,3.2rem) Fraunces,serif;margin-top:6px;color:var(--gb)}
+.typ{font:1rem 'IBM Plex Mono';color:var(--sage);min-height:1.6em;margin:24px 0}.caret{display:inline-block;width:2px;height:1.1em;background:var(--gb);margin-left:3px;vertical-align:middle;animation:blink 1s steps(1) infinite;text-decoration:none}@keyframes blink{50%{opacity:0}}
+.ffb{position:absolute;inset:0;pointer-events:none}.ff{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--gb);box-shadow:0 0 12px 3px rgba(221,172,73,.7);animation:fly ease-in-out infinite alternate}
+@keyframes fly{0%{transform:translate(0,0);opacity:.15}50%{opacity:1}100%{transform:translate(40px,-60px);opacity:.2}}
+.thx{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(circle at 50% 30%,#2d4d35,#0b170f 70%)}.thx.show{display:flex}.thx>div{position:relative;max-width:640px}
+.rain{position:absolute;inset:0;pointer-events:none;overflow:hidden}.rain span{position:absolute;top:-8%;animation:fall linear infinite;font-size:1.4rem}
+
+#welcome{position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;overflow:hidden;background:radial-gradient(circle at 50% 35%,#35603d,#162d1d 55%,#0a150e);transition:opacity .9s,transform .9s}
+#welcome.out{opacity:0;transform:scale(1.08);pointer-events:none}
+#welcome .rise{position:absolute;inset:0;pointer-events:none}#welcome .rise span{position:absolute;bottom:-10%;animation:rise linear infinite;opacity:.55}
+@keyframes rise{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(-115vh) rotate(300deg)}}
+#welcome .halo{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(221,172,73,.28),transparent 65%);top:50%;left:50%;transform:translate(-50%,-62%);animation:pulse 4s ease-in-out infinite}@keyframes pulse{50%{transform:translate(-50%,-62%) scale(1.2);opacity:.6}}
+#welcome>*{position:relative}.plant{width:150px;height:170px;overflow:visible;animation:sway 5s ease-in-out infinite;transform-origin:50% 100%}@keyframes sway{50%{transform:rotate(3deg)}}
+.plant .stem{fill:none;stroke:#9CB48E;stroke-width:3;stroke-linecap:round;stroke-dasharray:170;stroke-dashoffset:170;animation:grow 1.6s ease-out forwards}@keyframes grow{to{stroke-dashoffset:0}}
+.plant .lf path{fill:#6f9a5d;stroke:#b7d1a6;stroke-width:1}.plant .lf{transform-box:fill-box;transform-origin:bottom right;transform:scale(0);animation:pop .7s cubic-bezier(.3,1.6,.5,1) forwards;animation-delay:var(--d)}.plant .lf.r{transform-origin:bottom left}@keyframes pop{to{transform:scale(1)}}
+.plant .fl{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .9s 2.3s cubic-bezier(.3,1.6,.5,1) forwards,spin 14s 3s linear infinite}.plant .fl circle{fill:#DDAC49}.plant .fl .c{fill:#7a4a14}@keyframes spin{to{transform:scale(1) rotate(360deg)}}
+.wlc{font-size:clamp(1.9rem,6.5vw,3.8rem);line-height:1.1;margin:12px 0 4px}.wsub{color:var(--sage);letter-spacing:.2em;text-transform:uppercase;font-size:.72rem}
+.hcard{margin:18px auto;background:rgba(240,228,196,.96);color:var(--ink);padding:14px 26px;min-width:min(310px,88vw);border:1px dashed rgba(36,26,15,.4);animation:fin .6s}@keyframes fin{from{opacity:0;transform:translateY(12px) scale(.95)}}
+.hcard b{font:700 1.2rem Fraunces,serif;display:block}.hcard i{font-size:.8rem;color:var(--soft)}.hcard u{display:block;text-decoration:none;font-size:.82rem;color:var(--gold);margin-top:2px}
+.wtk{position:absolute!important;bottom:92px;left:0;right:0;overflow:hidden;white-space:nowrap;border-block:1px solid rgba(221,172,73,.35);padding:7px 0}.wtk div{display:inline-block;animation:mq 40s linear infinite;font:.78rem 'IBM Plex Mono';color:var(--gb)}
+.wload{width:min(320px,80vw);margin-top:6px}.wload .bar{margin:6px 0}.wload small{font:.7rem 'IBM Plex Mono';color:var(--sage)}
+#enterBtn{opacity:0;transform:translateY(10px);pointer-events:none;transition:all .5s;margin-top:8px;padding:13px 30px;font-size:.95rem;animation:glow 2s infinite}#enterBtn.on{opacity:1;transform:none;pointer-events:auto}@keyframes glow{50%{box-shadow:0 0 26px rgba(221,172,73,.7)}}
+#skipBtn{position:absolute!important;top:calc(16px + env(safe-area-inset-top,0px));right:18px;background:none;border:1px solid var(--line);color:var(--paper);padding:7px 14px;font-size:.78rem}
+
+.pyh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}.pyb{font:600 .68rem 'IBM Plex Mono';background:linear-gradient(90deg,#3776AB,#FFD43B);color:#12202b;padding:3px 10px;border-radius:12px;letter-spacing:.08em}
+.pane{display:none}.pane.on{display:block;animation:fin .5s}.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+textarea.code{font:.82rem/1.5 'IBM Plex Mono',monospace;min-height:230px;background:#0a150e;color:#cfe8c0;border-color:#3b5a3f;tab-size:4;white-space:pre}
+pre.pout{background:#0a150e;color:#9ef0a0;font:.8rem/1.5 'IBM Plex Mono',monospace;padding:14px;min-height:150px;max-height:300px;overflow:auto;margin:0;border:1px solid var(--line);white-space:pre-wrap}
+.pst{font:.72rem 'IBM Plex Mono';color:var(--sage);margin-top:8px;min-height:1.1em}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.kp div{background:rgba(36,26,15,.07);padding:10px;text-align:center}.kp b{display:block;font:600 1.15rem 'IBM Plex Mono';color:var(--gold)}.kp small{font-size:.66rem;text-transform:uppercase;color:var(--soft)}
+.rx h4{margin:12px 0 4px;font-family:Fraunces,serif}.rx .chip{color:var(--ink);background:rgba(196,146,46,.15);border-color:rgba(36,26,15,.25);margin:3px 3px 0 0}
+</style></head><body>
+<div id="welcome"><div class="rise" id="wRise"></div><div class="halo"></div><button id="skipBtn" data-act="enter">Skip ›</button>
+<div class="wsub">Welcome to the</div><svg class="plant" viewBox="0 0 200 230" aria-hidden="true"><path class="stem" d="M100 222C100 180 95 130 100 72"/>
+<g class="lf" style="--d:.7s"><path d="M98 190C66 184 50 164 46 142C78 144 96 164 98 190Z"/></g><g class="lf r" style="--d:.95s"><path d="M100 170C132 164 148 144 152 122C120 124 102 144 100 170Z"/></g>
+<g class="lf" style="--d:1.2s"><path d="M97 140C70 134 58 116 56 98C82 100 96 116 97 140Z"/></g><g class="lf r" style="--d:1.45s"><path d="M100 118C126 112 138 96 140 78C114 80 101 96 100 118Z"/></g>
+<g class="fl"><circle cx="100" cy="52" r="13"/><circle cx="118" cy="66" r="13"/><circle cx="82" cy="66" r="13"/><circle cx="90" cy="86" r="0"/><circle cx="100" cy="68" r="9" class="c"/></g></svg>
+<h1 class="lt wlc" id="wT"></h1><div class="wsub">Herbal &amp; Nutrition Apothecary · Nashik</div><div class="hcard" id="hcard"></div>
+<div class="wtk"><div id="wTk"></div></div><div class="wload" style="margin-top:96px"><div class="bar"><i id="wBar" style="width:0"></i></div><small id="wTxt">Picking fresh leaves…</small></div>
+<button class="btn bg" id="enterBtn" data-act="enter">Enter the Apothecary 🌿</button></div>
+<header><div class="nav wrap"><div class="brand">🌿<div>CEP Nutrition &amp; Herbal<small>Est. apothecary · plant-based wellness</small></div></div>
+<nav><a href="#shop">Shop</a><a href="#marketplace">Marketplace</a><a href="#sell">Sell</a><a href="#advisor">AI Herbalist</a><a href="#lab">Blend Lab</a><a href="#python">Python Lab</a><a href="#games">Games</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a><a href="#dashboard" id="dashLink" style="display:none">Dashboard</a></nav>
+<div class="act"><button class="btn bo" id="loginBtn" data-act="login">Login</button><button class="btn bo" data-act="wishOpen">♡<span class="cc" id="wc">0</span></button><button class="btn bo" data-act="cartOpen">Cart<span class="cc" id="cc">0</span></button></div></div></header>
+<div class="tick"><div>Lab tested · Single origin · Small batch · Free shipping over ₹999 · Cash on delivery · Win games, earn coupons · Lab tested · Single origin · Small batch · Free shipping over ₹999 · Cash on delivery · Win games, earn coupons · </div></div>
+
+<section class="hero"><div class="lv"><span style="left:6%;animation-duration:11s">🌿</span><span style="left:24%;animation-duration:14s;animation-delay:2s">🍃</span><span style="left:45%;animation-duration:12s;animation-delay:4s">🌿</span><span style="left:66%;animation-duration:16s;animation-delay:1s">🍃</span><span style="left:84%;animation-duration:13s;animation-delay:3s">🌿</span></div>
+<div class="wrap hg"><div><div class="eyebrow">Roots · Leaves · Resin · Ritual</div><h1>Herbal science, <em>bottled</em> with patience.</h1>
+<p>Small-batch herbal supplements from single-origin botanicals, labelled like specimens so you know exactly what's inside. Shop as a customer, join as a seller and chat with buyers directly.</p>
+<div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap"><a class="btn bg" href="#shop">Browse the shelf</a><button class="btn bo" data-act="sellerJoin">Become a seller</button><a class="btn bo" href="#advisor">Ask the AI Herbalist →</a></div></div>
+<div class="seal"><div class="stamp">VERIFIED<br>BOTANICAL<br>LOT</div><div class="mono" style="font-size:.66rem;color:var(--soft)">SPECIMEN LABEL · NO. CEP-014</div><h3>Ashwagandha Root</h3><div class="lat">Withania somnifera</div><hr style="border:0;border-top:1px solid rgba(36,26,15,.2);margin:14px 0"><ul><li>KSM-66® grade root extract</li><li>Third-party lab tested for purity</li><li>Adaptogen · supports calm &amp; recovery</li></ul></div></div></section>
+
+<section class="sec rv" id="why"><div class="wrap"><div class="eyebrow">Why CEP</div><h2>Rooted in trust, grown with care</h2>
+<div class="feat"><div class="ft"><span>🔬</span><h3>Lab tested</h3><p>Every batch checked for purity.</p></div><div class="ft"><span>🌱</span><h3>Single origin</h3><p>Traced to the farm it grew on.</p></div><div class="ft"><span>🚚</span><h3>Fast delivery</h3><p>Shipped across India, COD available.</p></div><div class="ft"><span>🤝</span><h3>Fair to farmers</h3><p>Direct marketplace for growers.</p></div></div>
+<div class="stats"><div class="stat"><b data-n="1200" data-s="+">0</b><span>Happy customers</span></div><div class="stat"><b data-n="16">0</b><span>Herbal products</span></div><div class="stat"><b data-n="25" data-s="+">0</b><span>Partner farms</span></div><div class="stat"><b data-n="4.8" data-d="1" data-s="★">0</b><span>Average rating</span></div></div>
+<div class="deal"><div style="position:relative;z-index:1"><div class="eyebrow">⚡ Deal of the day</div><h2>Ashwagandha Root Capsules</h2><p>KSM-66 grade root extract, our bestseller. Today's price ends in</p><div class="cdn" id="cd">--:--:--</div></div>
+<div class="dealR"><div class="big">🌿</div><div class="pr"><b id="dealPr"></b><s>₹599</s><em>-15%</em></div><div class="ca" style="justify-content:center"><button class="btn bo" data-act="view" data-v="ash" style="flex:none;color:var(--paper)">View</button><button class="btn bg" data-act="add" data-v="ash" style="flex:none">Grab the deal</button></div></div></div></div></section>
+<section class="sec rv" id="shop"><div class="wrap"><div class="eyebrow">The Catalogue</div><h2>Products, freshly stocked</h2><p class="sub">Every label lists the plant, and the price after discount.</p><div class="chips" id="chips"></div><div class="grid" id="shopGrid"></div></div></section>
+<section class="sec rv" id="marketplace"><div class="wrap"><div class="eyebrow">Peer Marketplace</div><h2>From independent growers</h2><p class="sub">Sage-edged cards are seller listings. Log in as a customer to message the seller.</p><div class="grid" id="mkGrid"></div></div></section>
+<section class="sec rv" id="sell"><div class="wrap"><div class="eyebrow">Become a Seller</div><h2>List your own herbal product</h2><p class="sub">It appears in the Marketplace immediately. Log in as a seller first to manage it from your dashboard and receive customer chats.</p>
+<div class="two"><form class="f panel" id="sellF"><label>Your name / farm name</label><input id="sS" required placeholder="e.g. Himalaya Organic Farms"><label>Contact (phone or email)</label><input id="sC" required placeholder="How buyers reach you"><label>Product name</label><input id="sN" required><label>Category</label><select id="sK"></select><label>Price (₹)</label><input id="sP" type="number" min="1" required><label>Description</label><textarea id="sD" required></textarea><button class="btn bg">List on the Marketplace</button></form>
+<div class="rx" id="sellPrev"><div class="mono" style="font-size:.64rem;color:var(--soft)">LIVE PREVIEW</div><p style="color:var(--soft);font-size:.86rem">Fill the form: your listing builds itself here.</p></div></div></div></section>
+<section class="sec" id="dashboard" style="display:none"><div class="wrap"><div class="eyebrow" id="dEy"></div><h2 id="dTi"></h2><p class="sub" id="dSu"></p><div id="dBody"></div></div></section>
+
+<section class="sec rv" id="advisor"><div class="wrap"><div class="eyebrow">Guidance</div><h2>Ask the AI Herbalist</h2><p class="sub">Tell it what you need (sleep, stress, immunity, protein, digestion) and it points you to a jar from our shelf. Guidance, not diagnosis.</p>
+<div class="two panel"><div><h3>Not sure where to start?</h3><div class="chips" style="margin-top:12px"><button class="chip" data-act="ask" data-v="I have trouble sleeping">Trouble sleeping</button><button class="chip" data-act="ask" data-v="Help with stress and low energy">Stress &amp; energy</button><button class="chip" data-act="ask" data-v="Best for immunity">Immunity</button><button class="chip" data-act="ask" data-v="Clean plant protein">Plant protein</button><button class="chip" data-act="ask" data-v="Digestion help">Digestion</button></div></div>
+<div><div class="chat" id="chat"><div class="cm"><div class="w">AI Herbalist</div>Hello! What would you like support with today?</div></div><div class="rr"><input id="chIn" placeholder="e.g. What's good for focus?"><button class="btn bg" data-act="askIn">Ask</button></div></div></div></div></section>
+
+<section class="sec rv" id="lab"><div class="wrap"><div class="eyebrow">Blend Lab</div><h2>Mix your own blend</h2><p class="sub">Move the sliders: a scoring algorithm weighs every herb and hands back a personal blend with dosage.</p>
+<div class="two panel"><div><div class="sl2"><label>Stress relief <output id="o1">5</output></label><input type="range" id="r1" min="0" max="10" value="5"></div><div class="sl2"><label>Energy <output id="o2">5</output></label><input type="range" id="r2" min="0" max="10" value="5"></div><div class="sl2"><label>Sleep quality <output id="o3">5</output></label><input type="range" id="r3" min="0" max="10" value="5"></div><button class="btn bg" data-act="mix">Mix my blend</button></div>
+<div class="rx" id="rxBox"><div class="mono" style="font-size:.64rem;color:var(--soft)">PERSONAL BLEND · DRAFT</div><p style="color:var(--soft);font-size:.86rem">Set your priorities, then press "Mix my blend".</p></div></div></div></section>
+
+<section class="sec rv" id="python"><div class="wrap"><div class="pyh"><span class="pyb">🐍 PYTHON LAB</span><div class="eyebrow" style="margin:0">Runs live in your browser</div></div><h2>Create with Python</h2><p class="sub">Three tools powered by real Python: plan your wellness routine, find the smartest way to unlock free shipping, or write your own code against our live catalogue. Needs internet the first time to load the Python engine.</p>
+<div class="chips"><button class="chip on" data-act="pyTab" data-v="p1">🧘 Wellness Planner</button><button class="chip" data-act="pyTab" data-v="p2">💸 Smart Savings</button><button class="chip" data-act="pyTab" data-v="p3">⌨️ Code Studio</button></div>
+<div class="panel"><div class="pane on" id="p1"><div class="two"><div class="f"><div class="frow"><div><label>Age</label><input id="pa" type="number" min="5" max="100" value="21"></div><div><label>Weight (kg)</label><input id="pw" type="number" min="15" max="250" value="60"></div></div><div class="frow"><div><label>Height (cm)</label><input id="ph" type="number" min="90" max="230" value="168"></div><div><label>Activity</label><select id="pc"><option value="low">Light</option><option value="mid" selected>Moderate</option><option value="high">Very active</option></select></div></div>
+<label>Main goal</label><select id="pg"><option value="calm">Calm &amp; better sleep</option><option value="energy">Energy &amp; stamina</option><option value="immunity">Immunity</option><option value="muscle">Protein &amp; muscle</option><option value="digestion">Digestion</option><option value="focus">Focus &amp; study</option></select><button class="btn bg" data-act="pyPlan">Run Python ▶</button><div class="pst" id="pst1"></div></div>
+<div class="rx" id="pOut1"><div class="mono" style="font-size:.64rem;color:var(--soft)">PERSONAL PLAN · DRAFT</div><p style="color:var(--soft);font-size:.86rem">Enter your details and press Run. Python calculates your BMI, daily water and protein targets, and a herbal routine. General wellness estimates only, not medical advice.</p></div></div></div>
+<div class="pane" id="p2"><div class="two"><div><h3>Unlock free shipping the cheapest way</h3><p style="color:var(--sage);font-size:.9rem">Add something to your cart, then let Python search every product combination for the smallest top-up that reaches ₹999.</p><button class="btn bg" data-act="pySave">Run Python ▶</button><div class="pst" id="pst2"></div></div><div class="rx" id="pOut2"><div class="mono" style="font-size:.64rem;color:var(--soft)">SAVINGS FINDER</div><p style="color:var(--soft);font-size:.86rem">Your best top-up options appear here.</p></div></div></div>
+<div class="pane" id="p3"><div class="chips"><button class="chip" data-act="pySnip" data-v="0">📊 Catalogue stats</button><button class="chip" data-act="pySnip" data-v="1">🎁 Build a combo</button><button class="chip" data-act="pySnip" data-v="2">🔥 Top deals</button></div><div class="two"><div><label>Write Python (you have <code>products</code> and <code>cart_total</code>)</label><textarea class="code" id="pcode" spellcheck="false"></textarea><div style="display:flex;gap:8px;margin-top:10px"><button class="btn bg" data-act="pyRun">Run ▶</button><button class="btn bo" data-act="pyReset">Reset</button></div></div><div><label>Output</label><pre class="pout" id="pout">Press Run to see your output here.</pre><div class="pst" id="pst3"></div></div></div></div></div></div></section>
+<section class="sec rv" id="games"><div class="wrap"><div class="eyebrow">Play &amp; Earn</div><h2>The Herb Garden Arcade</h2><p class="sub">Win a game to earn a discount coupon, then apply it in your cart.</p>
+<div class="chips"><button class="chip on" data-act="game" data-v="mem">Memory Match</button><button class="chip" data-act="game" data-v="leaf">Leaf Catch</button></div><div class="panel"><div id="gArea"></div><div id="wallet" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px"></div></div></div></section>
+<section class="sec rv" id="reviews"><div class="wrap"><div class="eyebrow">From the Community</div><h2>Customer reviews</h2><p class="sub">Open any product with View to read more or leave your own.</p><div class="grid" id="rvGrid"></div></div></section>
+<section class="sec rv" id="contact"><div class="wrap ci2"><div><div class="eyebrow">Get in touch</div><h2>Visit, call, or write to us</h2><ul class="cl"><li><b>Store</b>Plot 12, Herbal Trade Estate, Nashik, Maharashtra 422001</li><li><b>Phone</b><span class="mono">+91 98765 43210</span></li><li><b>WhatsApp</b><span class="mono">+91 98765 43211</span></li><li><b>Email</b><span class="mono">hello@cepherbal.example</span></li><li><b>Hours</b>Mon–Sat, 10:00–19:00 IST</li></ul></div>
+<form class="f" id="contF"><label>Your name</label><input id="cn" required><label>Email or phone</label><input id="cc2" required><label>Message</label><textarea id="cm" required placeholder="Question, bulk order, anything…"></textarea><button class="btn bg" style="align-self:flex-start">Send message</button></form></div></section>
+<section id="thanks"><div class="ffb" id="ffb"></div><div class="wrap" style="position:relative;text-align:center"><div class="eyebrow">With gratitude</div><h2 class="lt big" id="thT"></h2><h3 class="lt mid" id="thV"></h3><p class="typ"><span id="typ"></span><u class="caret"></u></p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn bg" href="#shop">Shop again 🌿</a><button class="btn bo" data-act="top">Back to top ↑</button><a class="btn bo" href="#contact">Say hello</a></div></div></section>
+<footer><div class="wrap"><div>© CEP Nutrition &amp; Herbal · Plot 12, Herbal Trade Estate, Nashik · Shipping across India</div><div class="disc">These statements have not been evaluated by any drug regulatory authority. Herbal products are not intended to diagnose, treat, cure or prevent any disease. Consult a healthcare professional before use, especially if pregnant, nursing, or on medication.</div></div></footer>
+<button class="fab" data-act="fab" aria-label="Ask AI Herbalist">🌿</button>
+
+<div class="ov" id="ov" data-act="closeAll"></div>
+<div class="drawer" id="drawer"><div class="dh"><h3>Your basket</h3><button class="x" data-act="closeAll">✕</button></div><div class="db" id="cartBody"></div>
+<div class="df"><div id="shipTxt" style="font-size:.8rem;color:var(--sage)"></div><div class="bar"><i id="shipFill"></i></div><div style="display:flex;gap:6px;margin-bottom:8px"><input id="cpIn" placeholder="Coupon code"><button class="btn bo" data-act="applyCp">Apply</button></div><div class="mono" id="payTxt" style="font-size:.84rem;margin-bottom:12px"></div><button class="btn bg" style="width:100%" data-act="checkout">Proceed to checkout</button></div></div>
+<div class="drawer" id="wDrawer"><div class="dh"><h3>Saved for later</h3><button class="x" data-act="closeAll">✕</button></div><div class="db" id="wBody"></div></div>
+<div class="modal" id="pM" style="width:min(580px,92vw)"></div>
+<div class="modal" id="authM"><div style="display:flex;justify-content:space-between"><h3 id="auTi"></h3><button class="x" style="color:var(--ink)" data-act="closeAll">✕</button></div>
+<div class="tabs" id="roleTabs"><button data-act="role" data-v="customer">Customer</button><button data-act="role" data-v="seller">Seller</button></div>
+<form class="f" id="authF"><div id="nmW"><label>Name / farm name</label><input id="auN"></div><label>Email</label><input type="email" id="auE" required><label>Password (min 6)</label><input type="password" id="auP" minlength="6" required><div class="err" id="auErr"></div><button class="btn bg" id="auS"></button><button type="button" class="btn bo" style="color:var(--ink)" data-act="mode" id="auSw"></button></form></div>
+<div class="modal" id="msgM"><div style="display:flex;justify-content:space-between"><h3 id="msTi"></h3><button class="x" style="color:var(--ink)" data-act="closeAll">✕</button></div><form class="f" id="msgF" style="margin-top:12px"><textarea id="msT" required placeholder="Ask about quantity, sourcing, delivery..."></textarea><button class="btn bg">Send</button></form></div>
+<div class="modal" id="coM"><div style="display:flex;justify-content:space-between"><h3>Complete your order</h3><button class="x" style="color:var(--ink)" data-act="closeAll">✕</button></div><form class="f" id="coF" style="margin-top:12px"><label>Full name</label><input id="coN" required><label>Phone</label><input id="coPh" required><label>Delivery address</label><textarea id="coA" required></textarea><label>Payment</label><select id="coPay"><option>Cash on delivery</option><option>UPI / Prepaid</option></select><div class="mono" id="coSum" style="font-size:.82rem"></div><button class="btn bg">Place order</button></form></div>
+<div class="thx" id="thx"><div class="rain" id="rain"></div><div><div class="eyebrow">Order confirmed</div><h2 class="lt big" id="thxT"></h2><p id="thxN" style="color:var(--sage);margin:14px 0"></p><h3 class="lt mid" id="thxV"></h3><p class="typ" style="margin-top:18px">We'll call you soon. Stay healthy, stay herbal!</p><button class="btn bg" data-act="thxClose">Continue shopping</button></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){"use strict";
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>{const d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML};
+const mem={};
+const L={get(k,d){if(k in mem)return mem[k];try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},set(k,v){mem[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const hash=s=>{let h=5381;for(const c of s)h=((h<<5)+h+c.charCodeAt(0))>>>0;return h.toString(36)};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const fmt=n=>"₹"+Math.round(n).toLocaleString("en-IN");
+const price=p=>Math.round(p.price*(1-(p.disc||0)/100));
+const P=(id,e,name,sub,cat,price,disc,desc,tag)=>({id,e,name,sub,cat,price,disc,desc,tag:tag||"",sku:"CEP-"+String(10+PL++*7).padStart(3,"0")});let PL=0;
+const PRODUCTS=[
+P("ash","🌿","Ashwagandha Root Capsules","Withania somnifera","Adaptogens",599,15,"KSM-66 grade root extract for calm energy and stress recovery.","best"),
+P("tur","🫚","Turmeric Curcumin Complex","Curcuma longa","Immunity",449,10,"High-curcumin extract with black pepper for absorption."),
+P("mor","🍃","Moringa Leaf Powder","Moringa oleifera","Nutrition",349,0,"Whole-leaf superfood powder, iron and vitamin rich.","new"),
+P("bra","🧠","Brahmi Memory Blend","Bacopa monnieri","Adaptogens",499,20,"Traditional herb for focus and memory.","best"),
+P("pro","💪","Plant Protein Isolate","Pea + rice protein","Nutrition",1299,12,"24g protein per serving, unflavoured."),
+P("tri","🍋","Triphala Digestive Tonic","Three-fruit blend","Ayurvedic Classics",299,0,"Classic formula for gentle daily digestion."),
+P("shi","⛰️","Shilajit Resin","Himalayan mineral pitch","Adaptogens",899,18,"Purified resin rich in fulvic acid, for stamina.","best"),
+P("gil","💧","Giloy Immunity Drops","Tinospora cordifolia","Immunity",399,8,"Concentrated drops from the 'root of immortality' vine.","new"),
+P("aml","🍊","Amla Vitamin-C Powder","Phyllanthus emblica","Immunity",279,10,"Sun-dried amla fruit, one of nature's richest vitamin C sources.","new"),
+P("sha","🌸","Shatavari Root Capsules","Asparagus racemosus","Adaptogens",549,12,"Traditional root tonic for hormonal balance and vitality."),
+P("spi","🟢","Spirulina Tablets","Arthrospira platensis","Nutrition",499,15,"Protein-rich blue-green algae, 500mg tablets.","new"),
+P("chy","🍯","Chyawanprash Classic","40-herb Ayurvedic jam","Ayurvedic Classics",425,5,"Slow-cooked amla jam with 40 herbs, a winter ritual."),
+P("tea","🍵","Tulsi Green Tea","Ocimum sanctum","Immunity",249,0,"Whole-leaf green tea blended with holy basil, 25 bags."),
+P("kal","🫒","Kalonji Seed Oil","Nigella sativa","Ayurvedic Classics",379,10,"Cold-pressed black seed oil, dark glass bottle."),
+P("flx","🌾","Omega Flax & Chia Mix","Linum + Salvia hispanica","Nutrition",329,0,"Roasted seed mix, rich in plant omega-3 and fibre.","new"),
+P("jat","🌙","Jatamansi Calm Tonic","Nardostachys jatamansi","Adaptogens",649,14,"Himalayan spikenard root tonic for evening calm.")];
+const CATS=["All","Adaptogens","Immunity","Nutrition","Ayurvedic Classics"];
+const M=(id,e,seller,contact,name,cat,price,desc)=>({id,e,seller,contact,name,sub:cat,cat,price,disc:0,desc});
+const SEED=[M("ml-1","🍯","Himalaya Organic Farms","+91 90210 11223","Wild Forest Honey","Nutrition",329,"Raw, unfiltered honey from high-altitude blooms."),
+M("ml-2","🌱","Satpura Herb Growers","satpuraherbs@example.com","Neem Leaf Powder","Immunity",199,"Sun-dried neem leaves, stone-ground."),
+M("ml-3","🌼","Vindhya Tulsi Collective","+91 88990 22110","Tulsi (Holy Basil) Drops","Adaptogens",279,"Cold-extracted drops from a women-run farming collective."),
+M("ml-4","🥥","Konkan Coast Growers","konkancoco@example.com","Cold-Pressed Coconut Oil","Nutrition",389,"Wooden-press virgin coconut oil, 500ml."),
+M("ml-5","🌺","Pampore Saffron Co-op","+91 94190 55667","Kashmiri Saffron 1g","Ayurvedic Classics",499,"Hand-picked mongra saffron threads.")];
+let market=L.get("cep-market",null);if(!market){market=SEED;L.set("cep-market",market)}
+let cart=L.get("cep-cart",[]),applied=L.get("cep-applied",null),wish=L.get("cep-wish",[]),cat="All",role="customer",mode="login",pending=null,timers=[];
+const session=()=>L.get("cep-session",null);
+const find=id=>PRODUCTS.concat(market).find(p=>p.id===id);
+let tt;function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),2800)}
+/* reviews */
+const R0={ash:[["Priya S.",5,"Genuinely helps me sleep better within a week."],["Rahul M.",4,"No jitters, easy to take with breakfast."]],tur:[["Anita K.",5,"Morning stiffness has eased a lot."]],mor:[["Devansh P.",4,"Mixes well in smoothies."]],bra:[["Sneha R.",5,"Noticeably sharper focus during exam prep."]],pro:[["Vikram T.",4,"Mixes smooth, no chalky aftertaste."]],tri:[["Meera D.",5,"Gentle, part of my nightly routine."]],shi:[["Arjun N.",5,"Real energy for evening workouts."]],gil:[["Farah A.",4,"Took it daily through the monsoon."]],aml:[["Isha G.",5,"Tangy, easy in water every morning."]],tea:[["Kavya L.",5,"Lovely calming evening cup."]]};
+const revs=id=>(L.get("cep-rev",{})[id])||(R0[id]||[]).map(a=>({n:a[0],r:a[1],c:a[2],d:"2026-06-01"}));
+const avg=id=>{const r=revs(id);return r.length?r.reduce((a,x)=>a+x.r,0)/r.length:0};
+const stars=a=>"★".repeat(Math.round(a))+"☆".repeat(5-Math.round(a));
+/* cards */
+const card=(p,m)=>`<div class="card${m?" mk":""}"><div class="top"><span>${m?"PRODUCER LISTING":p.sku}</span><span>${p.disc?`<span class="bd">-${p.disc}%</span>`:p.tag==="new"?`<span class="bd n">NEW</span>`:""}<button class="wish ${wish.includes(p.id)?"on":""}" data-act="wish" data-v="${p.id}" aria-label="Save">${wish.includes(p.id)?"♥":"♡"}</button></span></div><div class="gl">${p.e}</div><h3>${esc(p.name)}</h3><div class="lat">${esc(p.sub)}</div>${m?`<div class="sl">Sold by ${esc(p.seller)}</div>`:`<div><span class="st">${stars(avg(p.id))}</span> <span class="mono" style="font-size:.7rem;color:var(--soft)">(${revs(p.id).length})</span></div>`}<p>${esc(p.desc)}</p>
+<div class="pr"><b>${fmt(price(p))}</b>${p.disc?`<s>${fmt(p.price)}</s><em>-${p.disc}%</em>`:""}</div>
+<div class="ca">${m?`<button class="btn bo" data-act="contact" data-v="${p.id}">Contact</button>`:`<button class="btn bo" data-act="view" data-v="${p.id}">View</button>`}<button class="btn bg" data-act="add" data-v="${p.id}">Add to cart</button></div></div>`;
+function renderShop(){$("#chips").innerHTML=CATS.map(c=>`<button class="chip ${c===cat?"on":""}" data-act="cat" data-v="${c}">${c}</button>`).join("");$("#shopGrid").innerHTML=PRODUCTS.filter(p=>cat==="All"||p.cat===cat).map(p=>card(p,0)).join("")}
+function renderMarket(){$("#mkGrid").innerHTML=market.map(p=>card(p,1)).join("")||"<p>No listings yet.</p>"}
+function renderRev(){$("#rvGrid").innerHTML=PRODUCTS.filter(p=>revs(p.id).length).slice(0,6).map(p=>{const r=revs(p.id).slice(-1)[0];return`<div class="rc"><div class="mono" style="font-size:.7rem;color:var(--sage)">${esc(p.name)}</div><span class="st">${stars(r.r)}</span><p>"${esc(r.c)}"</p><div class="mono" style="font-size:.7rem;color:var(--sage)">${esc(r.n)}</div></div>`}).join("")}
+const paintAll=()=>{renderShop();renderMarket();renderWish()};
+/* wishlist */
+function renderWish(){L.set("cep-wish",wish);$("#wc").textContent=wish.length;$("#wBody").innerHTML=wish.map(id=>{const p=find(id);return p?`<div class="ci"><span style="font-size:1.6rem">${p.e}</span><div class="m">${esc(p.name)}<div class="mono" style="font-size:.76rem;color:var(--sage)">${fmt(price(p))}</div></div><button class="btn bo" style="padding:4px 10px" data-act="add" data-v="${id}">Add</button><button class="x" data-act="wish" data-v="${id}">✕</button></div>`:""}).join("")||"<p style='color:var(--sage)'>Nothing saved yet. Tap the heart on any product.</p>"}
+/* cart */
+function tot(){let sub=0;cart.forEach(c=>{const p=find(c.id);if(p)sub+=price(p)*c.qty});const disc=applied?Math.round(sub*applied.pct/100):0,ship=sub===0||sub>=999?0:49;return{sub,disc,ship,pay:sub-disc+ship}}
+function renderCart(){L.set("cep-cart",cart);$("#cc").textContent=cart.reduce((a,c)=>a+c.qty,0);
+$("#cartBody").innerHTML=cart.map(c=>{const p=find(c.id);return p?`<div class="ci"><span style="font-size:1.6rem">${p.e}</span><div class="m">${esc(p.name)}<div class="mono" style="font-size:.76rem;color:var(--sage)">${fmt(price(p))} × ${c.qty}</div></div><div class="q"><button data-act="dec" data-v="${c.id}">–</button><span class="mono">${c.qty}</span><button data-act="inc" data-v="${c.id}">+</button></div><button class="x" data-act="rm" data-v="${c.id}">✕</button></div>`:""}).join("")||"<p style='color:var(--sage)'>Your basket is empty.</p>";
+const t=tot();$("#shipFill").style.width=Math.min(100,t.sub/999*100)+"%";$("#shipTxt").textContent=t.sub>=999?"🎉 Free shipping unlocked!":`Add ${fmt(999-t.sub)} more for free shipping`;
+$("#payTxt").textContent=t.sub?`Payable: ${fmt(t.pay)}${applied?` (${applied.code} −${fmt(t.disc)})`:""}${t.ship?` · shipping ${fmt(t.ship)}`:""}`:""}
+/* wallet & games */
+function award(code,pct){const w=L.get("cep-wallet",[]);if(!w.some(x=>x.code===code)){w.push({code,pct});L.set("cep-wallet",w)}renderWallet()}
+function renderWallet(){const w=L.get("cep-wallet",[]);$("#wallet").innerHTML=w.length?"<span style='font-size:.8rem;color:var(--sage)'>Your coupons:</span>"+w.map(c=>`<span class="cp">${c.code} · ${c.pct}% off</span>`).join(""):"<span style='font-size:.8rem;color:var(--sage)'>Win a game or register to earn a coupon.</span>"}
+function stopGame(){timers.forEach(clearInterval);timers=[]}
+function memory(){stopGame();const em=["🌿","🍃","🌼","🍯","🌱","🫚"],deck=[...em,...em].sort(()=>Math.random()-.5);let open=[],moves=0,found=0,lock=false;
+$("#gArea").innerHTML=`<div class="mono" id="gi">Moves: 0 · Best: ${L.get("cep-best","—")}</div><div class="mg">${deck.map((_,i)=>`<button class="mem" data-i="${i}">?</button>`).join("")}</div>`;
+$$(".mem").forEach(b=>b.onclick=()=>{if(lock||b.classList.contains("up"))return;b.classList.add("up");b.textContent=deck[b.dataset.i];open.push(b);if(open.length<2)return;
+moves++;$("#gi").textContent="Moves: "+moves;const[a,c]=open;
+if(a.textContent===c.textContent){a.classList.add("done");c.classList.add("done");open=[];if(++found===6){if(moves<L.get("cep-best",99))L.set("cep-best",moves);award("HERB10",10);toast("All matched in "+moves+" moves! HERB10 earned 🌿")}}
+else{lock=true;setTimeout(()=>{[a,c].forEach(x=>{x.classList.remove("up");x.textContent="?"});open=[];lock=false},700)}})}
+function leaf(){stopGame();$("#gArea").innerHTML=`<div class="mono" id="gi">Catch 12 leaves in 15 seconds to win</div><div class="arena" id="ar"><button id="leafBtn">🍃</button></div><button class="btn bg" id="stb">Start</button>`;
+const b=$("#leafBtn"),ar=$("#ar");let s=0,t=15;const jump=()=>{b.style.left=Math.random()*(ar.clientWidth-44)+"px";b.style.top=Math.random()*(ar.clientHeight-44)+"px"};
+$("#stb").onclick=e=>{e.target.disabled=true;s=0;t=15;b.style.display="block";jump();
+timers.push(setInterval(()=>{t--;$("#gi").textContent=`Score ${s} · ${t}s`;if(t<=0){stopGame();b.style.display="none";$("#stb").disabled=false;$("#gi").textContent="Time! You caught "+s+".";if(s>=12){award("LEAF5",5);toast("Quick hands! LEAF5 earned 🍃")}}},1000));timers.push(setInterval(jump,900))};
+b.onclick=()=>{s++;$("#gi").textContent=`Score ${s} · ${t}s`;jump()}}
+/* AI herbalist (works offline) */
+const KB=[[/sleep|insomnia|rest|night/,"For restful evenings, Jatamansi Calm Tonic and Ashwagandha are traditional picks, and Triphala before bed is gentle.",["jat","ash"]],
+[/stress|anxi|calm|tension/,"Ashwagandha Root Capsules are our classic adaptogen for stress recovery. Shatavari is a softer option.",["ash","sha"]],
+[/energy|tired|stamina|fatigue|workout/,"For stamina, try Shilajit Resin in the morning, or Spirulina Tablets for plant-based nutrition.",["shi","spi"]],
+[/immun|cold|cough|monsoon|flu/,"For everyday immunity, Giloy Drops, Amla Vitamin-C Powder and Tulsi Green Tea work well together.",["gil","aml","tea"]],
+[/protein|muscle|gym/,"Our Plant Protein Isolate gives 24g per serving. Spirulina adds extra plant protein.",["pro","spi"]],
+[/digest|stomach|gut|bloat/,"Triphala Digestive Tonic is the classic gentle daily digestive. Chyawanprash is a good winter companion.",["tri","chy"]],
+[/focus|memory|study|exam|brain/,"Brahmi Memory Blend is the traditional herb for focus and memory, great for exam prep.",["bra"]],
+[/joint|inflam|pain|turmeric/,"Turmeric Curcumin Complex with black pepper is our go-to, and Kalonji Oil is a traditional pairing.",["tur","kal"]]];
+function ask(q){q=q.trim();if(!q)return;const log=$("#chat");const k=KB.find(x=>x[0].test(q.toLowerCase()));
+log.insertAdjacentHTML("beforeend",`<div class="cm u"><div class="w">You</div>${esc(q)}</div>`);
+const r=k?k[1]:"I can help with sleep, stress, energy, immunity, protein, digestion, focus or joints. Tell me which matters most.";
+log.insertAdjacentHTML("beforeend",`<div class="cm"><div class="w">AI Herbalist</div>${esc(r)}${k?`<div style="margin-top:6px">${k[2].map(i=>`<button class="chip" data-act="add" data-v="${i}">+ ${esc(find(i).name)}</button>`).join(" ")}</div>`:""}<div style="font-size:.72rem;color:var(--sage);margin-top:4px">Guidance only, not medical advice.</div></div>`);log.scrollTop=log.scrollHeight}
+/* blend lab */
+const HERBS={ash:[3,1,2,"300mg, morning and evening"],bra:[1,2,0,"250mg, with breakfast"],shi:[0,3,0,"pea-sized amount, morning"],tri:[0,1,2,"1 tsp in warm water, before bed"],gil:[0,1,0,"15 drops, morning"],tur:[0,0,1,"500mg, with a meal"],jat:[3,0,3,"1 tsp tonic, evening"],sha:[2,1,1,"500mg, morning"],spi:[0,2,0,"2 tablets, with lunch"]};
+function mix(){const v=[+$("#r1").value,+$("#r2").value,+$("#r3").value];const sc=Object.entries(HERBS).map(([id,h])=>[id,h[0]*v[0]+h[1]*v[1]+h[2]*v[2]]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,3);const t=sc.reduce((a,x)=>a+x[1],0)||1;
+$("#rxBox").innerHTML=sc.length?`<div class="mono" style="font-size:.64rem;color:var(--soft)">PERSONAL BLEND · RX-${Date.now().toString().slice(-5)}</div><div class="mono" style="font-size:.68rem;color:var(--soft)">Stress ${v[0]} · Energy ${v[1]} · Sleep ${v[2]}</div><div style="margin-top:10px">${sc.map(([id,s])=>`<div class="rl"><span>${esc(find(id).name)}<small>${HERBS[id][3]}</small></span><b>${Math.round(s/t*100)}%</b></div>`).join("")}</div><button class="btn bg" style="margin-top:14px" data-act="addBlend" data-v="${sc.map(x=>x[0]).join(",")}">Add full blend to cart</button>`:`<p style="color:var(--soft)">Move a slider above zero to get a recommendation.</p>`}
+/* dashboard */
+const thread=(m,rep)=>`<div class="thread"><div class="meta">${esc(m.listing)} · ${rep?"from "+esc(m.from):"to seller"}</div>${m.thread.map(t=>`<div class="bub ${(t.who==="s")===rep?"me":""}">${esc(t.text)}</div>`).join("")}${rep?`<div class="rr"><input data-rin="${m.id}" placeholder="Reply…"><button class="btn bg" data-act="reply" data-v="${m.id}">Send</button></div>`:""}</div>`;
+function renderDash(){const s=session();$("#dashboard").style.display=s?"block":"none";$("#dashLink").style.display=s?"inline":"none";$("#loginBtn").textContent=s?`${s.name.split(" ")[0]} · Logout`:"Login";if(!s)return;
+const msgs=L.get("cep-msgs",[]),orders=L.get("cep-orders",[]);$("#dEy").textContent=s.role==="seller"?"Seller Dashboard":"Customer Dashboard";$("#dTi").textContent="Hello, "+s.name;
+if(s.role==="seller"){$("#dSu").textContent="Manage listings, see orders and reply to customers.";
+const mine=market.filter(x=>x.owner===s.email),inbox=msgs.filter(m=>m.seller===s.email),ords=orders.flatMap(o=>o.items.filter(i=>i.owner===s.email).map(i=>({...i,id:o.id,buyer:o.name,phone:o.phone})));
+$("#dBody").innerHTML=`<div class="stats"><div class="stat"><b>${mine.length}</b><span>Listings</span></div><div class="stat"><b>${ords.length}</b><span>Orders</span></div><div class="stat"><b>${inbox.length}</b><span>Chats</span></div></div>
+<div class="two"><div class="panel"><h3>Add a product</h3><form class="f" id="addF"><input id="pN" required placeholder="Product name"><input id="pP" type="number" min="1" required placeholder="Price (₹)"><select id="pC">${CATS.slice(1).map(c=>`<option>${c}</option>`).join("")}</select><textarea id="pD" required placeholder="Description"></textarea><button class="btn bg">Publish to Marketplace</button></form>
+<h3 style="margin-top:20px">Your listings</h3><ul class="ml">${mine.map(p=>`<li><span>${esc(p.name)} · ${fmt(p.price)}</span><button class="btn bo" style="padding:3px 10px" data-act="del" data-v="${p.id}">Remove</button></li>`).join("")||"<li>None yet.</li>"}</ul>
+<h3 style="margin-top:20px">Orders</h3><ul class="ml">${ords.map(o=>`<li><span>${esc(o.name)} ×${o.qty} · ${esc(o.buyer)} (${esc(o.phone)})</span><span class="mono">${o.id}</span></li>`).join("")||"<li>No orders yet.</li>"}</ul></div>
+<div class="panel"><h3>Customer inbox</h3>${inbox.map(m=>thread(m,1)).join("")||"<p style='color:var(--sage)'>No messages yet.</p>"}</div></div>`}
+else{$("#dSu").textContent="Your conversations and orders.";const mine=msgs.filter(m=>m.fromEmail===s.email),my=orders.filter(o=>o.buyer===s.email);
+$("#dBody").innerHTML=`<div class="two"><div class="panel"><h3>Your messages</h3>${mine.map(m=>thread(m,0)).join("")||"<p style='color:var(--sage)'>None yet. Press Contact on a Marketplace card.</p>"}</div><div class="panel"><h3>Your orders</h3><ul class="ml">${my.map(o=>`<li><span>${o.id} · ${o.items.reduce((a,i)=>a+i.qty,0)} item(s)</span><span class="mono">${fmt(o.pay)}</span></li>`).join("")||"<li>No orders yet.</li>"}</ul></div></div>`}}
+/* modals */
+const show=id=>{$("#ov").classList.add("show");$("#"+id).classList.add("show")};
+const closeAll=()=>{$$(".modal,.drawer,.ov").forEach(e=>e.classList.remove("show"))};
+function paintAuth(){$$("#roleTabs button").forEach(b=>b.classList.toggle("on",b.dataset.v===role));const r=mode==="register";$("#nmW").style.display=r?"block":"none";$("#roleTabs").style.display=r?"flex":"none";$("#auTi").textContent=r?"Create your account":"Welcome back";$("#auS").textContent=r?"Register as "+role:"Login";$("#auSw").textContent=r?"Already registered? Login":"New here? Create an account";$("#auErr").textContent=""}
+function openAuth(m,r){mode=m;if(r)role=r;paintAuth();closeAll();show("authM")}
+function view(id){const p=find(id),r=revs(id),a=avg(id);$("#pM").innerHTML=`<div style="display:flex;justify-content:space-between"><div><div class="mono" style="font-size:.7rem;color:var(--soft)">${p.sku} · ${p.cat}</div><h2 style="font-size:1.5rem">${p.e} ${esc(p.name)}</h2><div class="lat">${esc(p.sub)}</div></div><button class="x" style="color:var(--ink)" data-act="closeAll">✕</button></div>
+<div style="margin-top:10px"><span class="st">${stars(a)}</span> <span class="mono" style="font-size:.76rem">${a?a.toFixed(1):"—"} · ${r.length} review${r.length===1?"":"s"}</span></div><p style="color:var(--soft)">${esc(p.desc)}</p>
+<div class="pr" style="justify-content:flex-start"><b style="font-size:1.3rem">${fmt(price(p))}</b>${p.disc?`<s>${fmt(p.price)}</s><em>${p.disc}% off</em>`:""}</div>
+<div style="display:flex;gap:10px;margin:14px 0"><input id="pq" type="number" min="1" value="1" style="width:80px"><button class="btn bg" data-act="addq" data-v="${id}">Add to cart</button></div><hr>
+<h3>Reviews</h3>${r.slice().reverse().map(x=>`<div style="border-bottom:1px solid rgba(36,26,15,.15);padding:8px 0"><span class="st">${stars(x.r)}</span><div style="font-size:.88rem">${esc(x.c)}</div><div class="mono" style="font-size:.7rem;color:var(--soft)">${esc(x.n)} · ${x.d}</div></div>`).join("")||"<p style='color:var(--soft)'>No reviews yet. Be the first.</p>"}
+<h3 style="margin-top:16px">Write a review</h3><form class="f" id="rvF" data-id="${id}"><input id="rvN" required placeholder="Your name" value="${esc(session()?session().name:"")}"><select id="rvR"><option value="5">★★★★★ Excellent</option><option value="4">★★★★ Good</option><option value="3">★★★ Okay</option><option value="2">★★ Poor</option><option value="1">★ Bad</option></select><textarea id="rvC" required placeholder="How did it work for you?"></textarea><button class="btn bg">Submit review</button></form>`;closeAll();show("pM")}
+function addListing(o){market.push({id:"ml-"+uid(),e:["🌿","🍯","🌱","🍃","🫚","🌼"][Math.floor(Math.random()*6)],sub:o.cat,disc:0,...o});L.set("cep-market",market);renderMarket();renderDash();toast("Product published to the Marketplace!")}
+function sellPrev(){const n=$("#sN").value||"Product name",s=$("#sS").value||"Your farm name",p=+$("#sP").value;$("#sellPrev").innerHTML=`<div class="mono" style="font-size:.64rem;color:var(--soft)">LIVE PREVIEW</div><div class="rl" style="margin-top:10px"><span>${esc(n)}<small>${esc($("#sK").value)} · Sold by ${esc(s)}</small></span><b>${p?fmt(p):"—"}</b></div><p style="font-size:.8rem;color:var(--soft)">${esc($("#sD").value||"Your description will appear here.")}</p>`}
+const A={
+add(id){const c=cart.find(x=>x.id===id);c?c.qty++:cart.push({id,qty:1});renderCart();toast("Added to basket.")},
+addq(id){const q=Math.max(1,+$("#pq").value||1),c=cart.find(x=>x.id===id);c?c.qty+=q:cart.push({id,qty:q});renderCart();toast("Added to basket.")},
+addBlend(v){v.split(",").forEach(id=>{const c=cart.find(x=>x.id===id);c?c.qty++:cart.push({id,qty:1})});renderCart();toast("Blend added to your basket.")},
+inc(id){cart.find(x=>x.id===id).qty++;renderCart()},dec(id){const c=cart.find(x=>x.id===id);c.qty=Math.max(1,c.qty-1);renderCart()},
+rm(id){cart=cart.filter(x=>x.id!==id);renderCart()},cat(v){cat=v;renderShop()},view,
+wish(id){wish=wish.includes(id)?wish.filter(x=>x!==id):[...wish,id];paintAll()},
+wishOpen(){closeAll();show("wDrawer")},cartOpen(){closeAll();show("drawer")},closeAll,
+login(){if(session()){L.set("cep-session",null);toast("Logged out.");renderDash()}else openAuth("login")},
+sellerJoin(){openAuth("register","seller")},role(v){role=v;paintAuth()},mode(){mode=mode==="login"?"register":"login";paintAuth()},
+ask(v){ask(v)},askIn(){const i=$("#chIn");ask(i.value);i.value=""},mix,fab(){$("#advisor").scrollIntoView({behavior:"smooth"});$("#chIn").focus()},
+applyCp(){const c=$("#cpIn").value.trim().toUpperCase(),f=L.get("cep-wallet",[]).find(x=>x.code===c);if(!f)return toast("Coupon not in your wallet. Win a game or register.");applied=f;L.set("cep-applied",f);toast(c+" applied.");renderCart()},
+game(v,el){$$("[data-act=game]").forEach(b=>b.classList.toggle("on",b===el));v==="mem"?memory():leaf()},
+contact(id){const p=market.find(x=>x.id===id),s=session();if(!p.owner)return toast(`Contact ${p.seller}: ${p.contact}`);
+if(!s||s.role!=="customer"){toast("Login as a customer to message sellers.");return openAuth("login","customer")}
+pending=p;$("#msTi").textContent="Message "+p.seller;closeAll();show("msgM")},
+reply(id){const i=$(`[data-rin="${id}"]`),t=i.value.trim();if(!t)return;const ms=L.get("cep-msgs",[]);ms.find(m=>m.id===id).thread.push({who:"s",text:t});L.set("cep-msgs",ms);renderDash();toast("Reply sent.")},
+del(id){const s=session(),i=market.findIndex(x=>x.id===id);if(i>-1&&market[i].owner===s.email){market.splice(i,1);L.set("cep-market",market);renderMarket();renderDash()}},
+checkout(){if(!cart.length)return toast("Your basket is empty.");const s=session(),t=tot(),pf=L.get("cep-prof",{});$("#coN").value=s?s.name:pf.n||"";$("#coPh").value=pf.p||"";$("#coA").value=pf.a||"";
+$("#coSum").textContent=`Total payable ${fmt(t.pay)}`;closeAll();show("coM")}};
+document.addEventListener("click",e=>{const a=e.target.closest("[data-act]");if(!a||!A[a.dataset.act])return;if(a.id==="ov"&&e.target!==a)return;A[a.dataset.act](a.dataset.v,a)});
+document.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.id==="chIn")A.askIn()});
+document.addEventListener("input",e=>{if(e.target.closest("#sellF"))sellPrev();if(/^r[123]$/.test(e.target.id))$("#o"+e.target.id[1]).textContent=e.target.value});
+document.addEventListener("submit",e=>{e.preventDefault();const f=e.target.id,s=session();
+if(f==="authF"){const em=$("#auE").value.trim().toLowerCase(),pw=$("#auP").value,us=L.get("cep-users",[]);
+if(mode==="register"){const n=$("#auN").value.trim();if(!n)return $("#auErr").textContent="Please enter your name.";if(us.some(u=>u.email===em))return $("#auErr").textContent="Email already registered.";
+us.push({email:em,name:n,role,pw:hash(pw)});L.set("cep-users",us);L.set("cep-session",{email:em,name:n,role});award("WELCOME5",5);toast("Account created. WELCOME5 coupon added!")}
+else{const u=us.find(x=>x.email===em&&x.pw===hash(pw));if(!u)return $("#auErr").textContent="Wrong email or password.";L.set("cep-session",{email:u.email,name:u.name,role:u.role});toast("Welcome back, "+u.name+"!")}
+e.target.reset();closeAll();renderDash()}
+if(f==="msgF"&&s&&pending){const ms=L.get("cep-msgs",[]);ms.push({id:uid(),listing:pending.name,seller:pending.owner,from:s.name,fromEmail:s.email,thread:[{who:"c",text:$("#msT").value.trim()}]});L.set("cep-msgs",ms);e.target.reset();closeAll();toast("Message sent to the seller.");renderDash()}
+if(f==="addF"){addListing({owner:s.email,seller:s.name,contact:s.email,name:$("#pN").value.trim(),cat:$("#pC").value,price:+$("#pP").value,desc:$("#pD").value.trim()})}
+if(f==="sellF"){const own=s&&s.role==="seller"?s.email:undefined;addListing({owner:own,seller:$("#sS").value.trim(),contact:$("#sC").value.trim(),name:$("#sN").value.trim(),cat:$("#sK").value,price:+$("#sP").value,desc:$("#sD").value.trim()});e.target.reset();sellPrev();$("#marketplace").scrollIntoView({behavior:"smooth"})}
+if(f==="rvF"){const id=e.target.dataset.id,all=L.get("cep-rev",{});const l=revs(id);l.push({n:$("#rvN").value.trim(),r:+$("#rvR").value,c:$("#rvC").value.trim(),d:new Date().toISOString().slice(0,10)});all[id]=l;L.set("cep-rev",all);renderShop();renderRev();view(id);toast("Thanks, your review was posted.")}
+if(f==="contF"){const m=L.get("cep-contact",[]);m.push({n:$("#cn").value,c:$("#cc2").value,m:$("#cm").value,t:new Date().toISOString()});L.set("cep-contact",m);e.target.reset();toast("Message sent. We'll get back to you soon.")}
+if(f==="coF"){const t=tot(),o={id:"ORD"+Date.now().toString().slice(-8),buyer:s?s.email:"guest",name:$("#coN").value.trim(),phone:$("#coPh").value.trim(),address:$("#coA").value.trim(),pay:t.pay,payment:$("#coPay").value,coupon:applied?applied.code:null,
+items:cart.map(c=>{const p=find(c.id);return{name:p.name,qty:c.qty,price:price(p),owner:p.owner||null}})},os=L.get("cep-orders",[]);os.push(o);L.set("cep-orders",os);L.set("cep-prof",{n:o.name,p:o.phone,a:o.address});
+cart=[];applied=null;L.set("cep-applied",null);renderCart();closeAll();renderDash();thanks(o)}});
+
+function letters(el,t){el.innerHTML=[...t].map((c,i)=>`<span style="--i:${i}">${c===" "?"&nbsp;":esc(c)}</span>`).join("")}
+function flies(box,n){for(let i=0;i<n;i++){const s=document.createElement("i");s.className="ff";s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${5+Math.random()*7}s;animation-delay:${-Math.random()*8}s`;box.appendChild(s)}}
+const MS=["Stay healthy, stay herbal 🌿","Nature is waiting for your next visit","Grown with care, shared with love","Come back soon, your wellness journey continues","Thank you for trusting CEP Nutrition & Herbal"];
+(function(){let m=0,c=0,d=false,h=0;const el=$("#typ");setInterval(()=>{if(h>0){h--;return}const t=MS[m];c+=d?-1:1;el.textContent=t.slice(0,c);if(!d&&c===t.length){d=true;h=26}else if(d&&c===0){d=false;m=(m+1)%MS.length}},70)})();
+function cd(){const n=new Date(),e=new Date(n);e.setHours(23,59,59,999);const s=Math.floor((e-n)/1000),f=x=>String(x).padStart(2,"0");$("#cd").textContent=`${f(Math.floor(s/3600))}:${f(Math.floor(s%3600/60))}:${f(s%60)}`}
+cd();setInterval(cd,1000);$("#dealPr").textContent=fmt(price(find("ash")));
+function count(el){const n=+el.dataset.n,d=el.dataset.d?1:0;let t0;const st=ts=>{t0=t0||ts;const k=Math.min(1,(ts-t0)/1600);el.textContent=(n*k).toFixed(d)+(k===1?(el.dataset.s||""):"");if(k<1)requestAnimationFrame(st)};requestAnimationFrame(st)}
+if("IntersectionObserver"in window){const io2=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){count(x.target);io2.unobserve(x.target)}}),{threshold:.6});$$("[data-n]").forEach(x=>io2.observe(x))}else $$("[data-n]").forEach(x=>{x.textContent=x.dataset.n+(x.dataset.s||"")});
+letters($("#thT"),"Thank You");letters($("#thV"),"Visit Again 🌿");flies($("#ffb"),26);
+function thanks(o){letters($("#thxT"),"Thank You!");letters($("#thxV"),"Visit Again 🌿");$("#thxN").textContent=`${o.name}, your order ${o.id} is confirmed.`;
+$("#rain").innerHTML=Array.from({length:14},(_,i)=>`<span style="left:${i*7+Math.random()*5}%;animation-duration:${6+Math.random()*7}s;animation-delay:${-Math.random()*8}s">${i%2?"🍃":"🌿"}</span>`).join("");$("#thx").classList.add("show")}
+A.thxClose=()=>$("#thx").classList.remove("show");A.top=()=>scrollTo({top:0,behavior:"smooth"});
+
+(function(){const w=$("#welcome"),HB=[["🌿","Ashwagandha","Withania somnifera","Calm energy & stress recovery"],["🫚","Turmeric","Curcuma longa","Golden support for immunity"],["🍃","Moringa","Moringa oleifera","Iron-rich leaf superfood"],["🧠","Brahmi","Bacopa monnieri","Focus & memory herb"],["🌼","Tulsi","Ocimum sanctum","Holy basil for daily balance"],["🍊","Amla","Phyllanthus emblica","Nature's vitamin C"],["⛰️","Shilajit","Himalayan resin","Stamina from the mountains"],["🌸","Shatavari","Asparagus racemosus","Traditional root tonic"]],TX=["Picking fresh leaves…","Drying the roots…","Lab testing every batch…","Labelling the jars…","Opening the shelf…"];
+document.body.style.overflow="hidden";letters($("#wT"),"CEP Nutrition & Herbal");
+$("#wRise").innerHTML=Array.from({length:16},(_,i)=>`<span style="left:${i*6.5+Math.random()*4}%;font-size:${1+Math.random()*1.4}rem;animation-duration:${9+Math.random()*10}s;animation-delay:${-Math.random()*14}s">${["🌿","🍃","🌱","🌼","🫚"][i%5]}</span>`).join("");
+const tk=PRODUCTS.map(p=>`${p.e} ${p.name} · ${fmt(price(p))}`).join("   ✦   ");$("#wTk").textContent=tk+"   ✦   "+tk+"   ✦   ";
+let h=0;const sh=()=>{const x=HB[h++%HB.length];$("#hcard").innerHTML=`<span style="font-size:2rem">${x[0]}</span><b>${x[1]}</b><i>${x[2]}</i><u>${x[3]}</u>`;$("#hcard").style.animation="none";void $("#hcard").offsetWidth;$("#hcard").style.animation=""};sh();const hi=setInterval(sh,2300);
+let p=0;const bi=setInterval(()=>{p=Math.min(100,p+2);$("#wBar").style.width=p+"%";$("#wTxt").textContent=p<100?TX[Math.min(4,Math.floor(p/20))]:"Fresh shelf ready 🌿";if(p>=100){clearInterval(bi);$("#enterBtn").classList.add("on")}},100);
+A.enter=()=>{clearInterval(bi);clearInterval(hi);w.classList.add("out");document.body.style.overflow="";scrollTo(0,0);setTimeout(()=>w.remove(),1000)}})();
+
+(function(){const SN=[`import json
+products = json.loads(products_json)
+print("🌿 CEP catalogue:", len(products), "products\\n")
+by_cat = {}
+for p in products:
+    by_cat.setdefault(p["cat"], []).append(p["price"])
+for c, v in by_cat.items():
+    print(f"{c:20} avg ₹{sum(v)/len(v):.0f}  ({len(v)} items)")`,
+`import json
+products = json.loads(products_json)
+budget = 1000
+chosen, total = [], 0
+for p in sorted(products, key=lambda x: x["price"]):
+    if total + p["price"] <= budget:
+        chosen.append(p["name"])
+        total += p["price"]
+print(f"🎁 Combo under ₹{budget}:")
+for n in chosen: print("  +", n)
+print(f"Total: ₹{total}")`,
+`import json
+products = json.loads(products_json)
+print("🔥 Top 5 deals today\\n")
+for p in sorted(products, key=lambda x: -x["disc"])[:5]:
+    print(f"{p['disc']:>2}% off  {p['name']:28} ₹{p['price']}")
+print("\\nYour cart total is ₹", cart_total)`];
+const SETUP=`
+import json
+GOALS={"calm":["ash","jat","tri"],"energy":["shi","spi","mor"],"immunity":["gil","aml","tea","tur"],"muscle":["pro","spi","flx"],"digestion":["tri","chy","aml"],"focus":["bra","ash","aml"]}
+ROUT={"calm":("Warm water + herb after waking","Short walk, deep breaths","Calm tonic 1 hour before bed"),"energy":("Energy herb with breakfast","Spirulina or leaf powder at lunch","Early dinner, screen-free hour"),"immunity":("Amla or giloy in the morning","Tulsi tea mid-afternoon","Turmeric with dinner"),"muscle":("Protein shake after training","Seed mix as a snack","Protein-rich dinner, water before bed"),"digestion":("Warm water first thing","Light lunch, slow eating","Triphala before bed"),"focus":("Focus herb with breakfast","Study in 50-minute blocks","Wind-down tea, no screens")}
+def plan(age,w,h,act,goal):
+    bmi=w/((h/100)**2)
+    cat="Below typical range" if bmi<18.5 else "Typical range" if bmi<25 else "Above typical range" if bmi<30 else "Well above typical range"
+    water=round(w*0.033*{"low":1.0,"mid":1.1,"high":1.25}[act],1)
+    prot=round(w*{"low":0.8,"mid":1.0,"high":1.4}[act])
+    return json.dumps({"bmi":round(bmi,1),"cat":cat,"water":water,"protein":prot,"ids":GOALS[goal],"routine":ROUT[goal]})
+def saver(total,items):
+    need=999-total
+    if need<=0: return json.dumps({"done":True})
+    opts=[]
+    for i,a in enumerate(items):
+        if a["price"]>=need: opts.append(([a["id"]],a["price"]))
+        for b in items[i+1:]:
+            if a["price"]+b["price"]>=need: opts.append(([a["id"],b["id"]],a["price"]+b["price"]))
+    opts.sort(key=lambda o:o[1])
+    return json.dumps({"done":False,"need":need,"opts":[{"ids":o[0],"cost":o[1]} for o in opts[:3]]})
+`;
+let pyP=null;const $st=(id,t)=>{$("#"+id).textContent=t};
+function getPy(st){if(!pyP){pyP=(async()=>{st("Starting Python engine… (first time takes a few seconds)");await new Promise((ok,no)=>{const sc=document.createElement("script");sc.src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js";sc.onload=ok;sc.onerror=no;document.head.appendChild(sc)});const py=await loadPyodide();py.runPython(SETUP);return py})();pyP.catch(()=>{pyP=null})}return pyP}
+const fail=id=>$st(id,"The Python engine can't load inside the hosted page. Download the HTML file and open it with internet to run Python.");
+const items=()=>PRODUCTS.map(p=>({id:p.id,name:p.name,cat:p.cat,price:price(p),disc:p.disc}));
+const names=ids=>ids.map(i=>`<button class="chip" data-act="add" data-v="${i}">+ ${esc(find(i).name)}</button>`).join("");
+$("#pcode").value=SN[0];
+$("#pcode").addEventListener("keydown",e=>{if(e.key==="Tab"){e.preventDefault();const t=e.target,a=t.selectionStart;t.value=t.value.slice(0,a)+"    "+t.value.slice(t.selectionEnd);t.selectionStart=t.selectionEnd=a+4}});
+A.pyTab=(v,el)=>{$$("[data-act=pyTab]").forEach(b=>b.classList.toggle("on",b===el));$$("#python .pane").forEach(p=>p.classList.toggle("on",p.id===v))};
+A.pyPlan=async()=>{const n=x=>Math.max(1,Number($(x).value)||1);try{const py=await getPy(t=>$st("pst1",t));$st("pst1","Running Python…");
+const d=JSON.parse(py.runPython(`plan(${n("#pa")},${n("#pw")},${n("#ph")},"${$("#pc").value}","${$("#pg").value}")`)),r=d.routine;
+$("#pOut1").innerHTML=`<div class="mono" style="font-size:.64rem;color:var(--soft)">PERSONAL PLAN · PY-${Date.now().toString().slice(-4)}</div><div class="kp"><div><b>${d.bmi}</b><small>BMI</small></div><div><b>${d.water} L</b><small>Water / day</small></div><div><b>${d.protein} g</b><small>Protein / day</small></div></div><div style="font-size:.84rem;color:var(--soft)">Body-mass range: ${d.cat}</div>
+<h4>Daily routine</h4><div class="rl"><span>🌅 Morning<small>${r[0]}</small></span></div><div class="rl"><span>☀️ Afternoon<small>${r[1]}</small></span></div><div class="rl"><span>🌙 Evening<small>${r[2]}</small></span></div><h4>Suggested from our shelf</h4>${names(d.ids)}<button class="btn bg" style="margin-top:12px;display:block" data-act="addBlend" data-v="${d.ids.join(",")}">Add all to cart</button><p style="font-size:.7rem;color:var(--soft)">General wellness estimates, not medical advice.</p>`;$st("pst1","Computed with Python ✓")}catch(e){fail("pst1")}};
+A.pySave=async()=>{try{const py=await getPy(t=>$st("pst2",t));$st("pst2","Searching combinations…");const sub=tot().sub;
+py.globals.set("it_json",JSON.stringify(items()));const d=JSON.parse(py.runPython(`saver(${sub},json.loads(it_json))`));
+$("#pOut2").innerHTML=d.done?`<div class="mono" style="font-size:.64rem;color:var(--soft)">SAVINGS FINDER</div><h4>🎉 ${sub?"You already have free shipping!":"Cart is empty"}</h4><p style="color:var(--soft);font-size:.86rem">${sub?"Nothing more needed.":"Add a product, then run again."}</p>`:
+`<div class="mono" style="font-size:.64rem;color:var(--soft)">SAVINGS FINDER · NEED ${fmt(d.need)} MORE</div>${d.opts.map((o,i)=>`<div class="rl"><span>${i===0?"⭐ Best: ":""}${o.ids.map(x=>esc(find(x).name)).join(" + ")}<small>Adds ${fmt(o.cost)}, shipping becomes free</small></span><button class="btn bg" style="padding:6px 10px;font-size:.72rem" data-act="addBlend" data-v="${o.ids.join(",")}">Add</button></div>`).join("")}`;$st("pst2","Computed with Python ✓")}catch(e){fail("pst2")}};
+A.pyRun=async()=>{const o=$("#pout");let out="";try{const py=await getPy(t=>$st("pst3",t));$st("pst3","Running…");py.globals.set("products_json",JSON.stringify(items()));py.globals.set("cart_total",tot().sub);
+py.setStdout({batched:m=>{out+=m+"\n"}});py.setStderr({batched:m=>{out+=m+"\n"}});await py.runPythonAsync($("#pcode").value);o.textContent=out||"(no output, try print())";$st("pst3","Done ✓")}catch(e){if(!pyP||!out){o.textContent=String(e.message||e).split("\n").slice(-4).join("\n")}else o.textContent=out+"\n"+String(e.message||e).split("\n").slice(-3).join("\n");$st("pst3","Error, check your code")}};
+A.pySnip=v=>{$("#pcode").value=SN[+v]};A.pyReset=()=>{$("#pcode").value=SN[0];$("#pout").textContent="Press Run to see your output here."}})();
+$("#sK").innerHTML=CATS.slice(1).map(c=>`<option>${c}</option>`).join("");
+paintAll();renderCart();renderWallet();renderDash();renderRev();memory();
+const rvl=$$(".rv");if("IntersectionObserver"in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.08});rvl.forEach(x=>io.observe(x))}else rvl.forEach(x=>x.classList.add("in"));
+})();
+</script></body></html>
